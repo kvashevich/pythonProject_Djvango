@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Cats {% endblock %}
+
+{% block content_img %}
+ <img src="{% static 'main/img/cat_1.jpg' %}" alt="lil_cat">
+{% endblock %}
+
+{% block content %}
+    <h1>КОТИКИ</h1>
+    <p>котики</p>
+{% endblock %}

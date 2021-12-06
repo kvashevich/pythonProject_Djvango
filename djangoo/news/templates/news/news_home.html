@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content_img %}
+ <img src="{% static 'main/img/cat_and_dog_1.jpg' %}" alt="love_img">
+{% endblock %}
+
+{% block content %}
+    <div class="futures">
+    <h1>Котики</h1>
+    <p>Новости только про котиков и собачек и птичек</p>
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{el.title}}</h3>
+                    <p>{{el.anons}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {# комментарий #}
+    </div>
+{% endblock %}
